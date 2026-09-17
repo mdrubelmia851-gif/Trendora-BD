@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendora BD — Trendy Products • Better Life</title>
+  <meta name="description" content="Trendora BD - Stylish Watches, শাড়ি, পাঞ্জাবি, Cosmetics & Beauty Products">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="assets/trendora-logo.png" alt="Trendora BD logo">
+      </a>
+      <div class="search-box">
+        <input id="searchInput" type="search" placeholder="পণ্য খুঁজুন...">
+        <button id="searchBtn">🔍</button>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">হোম</a>
+        <a href="#categories">ক্যাটাগরি</a>
+        <a href="#products">পণ্য</a>
+        <a href="#contact">যোগাযোগ</a>
+      </nav>
+      <button class="cart-btn" id="cartOpen">🛒 <span>কার্ট</span> <b id="cartCount">0</b></button>
+      <button class="menu-btn" id="menuBtn"></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <img src="assets/trendora-cover.png" alt="Trendora BD cover" class="hero-image">
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">TRENDORA BD</p>
+            <h2>জনপ্রিয় ক্যাটাগরি</h2>
+          </div>
+          <p>আপনার পছন্দের পণ্য এক জায়গায়</p>
+        </div>
+        <div class="category-grid">
+          <button class="category-card" data-category="Watches"><span>⌚</span><strong>Stylish
+              Watches</strong><small>স্টাইলিশ ঘড়ি</small></button>
+          <button class="category-card" data-category="Saree"><span>🥻</span><strong>শাড়ি</strong><small>সুন্দর
+              কালেকশন</small></button>
+          <button class="category-card" data-category="Panjabi"><span>👔</span><strong>পাঞ্জাবি</strong><small>ঈদ ও
+              উৎসবের কালেকশন</small></button>
+          <button class="category-card" data-category="Beauty"><span>💄</span><strong>Cosmetics &
+              Beauty</strong><small>বিউটি প্রোডাক্টস</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products-section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">OUR COLLECTION</p>
+            <h2>জনপ্রিয় পণ্য</h2>
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="All">সব</button>
+            <button class="filter" data-filter="Watches">ঘড়ি</button>
+            <button class="filter" data-filter="Saree">শাড়ি</button>
+            <button class="filter" data-filter="Panjabi">পাঞ্জাবি</button>
+            <button class="filter" data-filter="Beauty">কসমেটিকস</button>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <div>✓ <span><strong>100% Original</strong><small>মানসম্মত পণ্য</small></span></div>
+        <div>🚚 <span><strong>Fast Delivery</strong><small>দ্রুত ডেলিভারি</small></span></div>
+        <div>★ <span><strong>Best Quality</strong><small>সেরা কোয়ালিটি</small></span></div>
+        <div>♡ <span><strong>Customer Care</strong><small>বিশ্বস্ত সাপোর্ট</small></span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">CONTACT US</p>
+          <h2>Trendora BD-এর সাথে যোগাযোগ করুন</h2>
+          <p>অর্ডার, পণ্য বা ডেলিভারি সম্পর্কে জানতে আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+        <div class="contact-buttons">
+          <a href="tel:+8801874-461912">📞 কল করুন</a>
+          <a href="https://m.me/" target="_blank" rel="noopener">💬 Messenger</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>Trendora BD</strong><span>Trendy Products • Better Life</span></div>
+      <p>© <span id="year"></span> Trendora BD. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3>🛒 আপনার কার্ট</h3><button id="cartClose">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div><span>মোট</span><strong id="cartTotal">৳0</strong></div>
+      <button id="checkoutBtn" class="checkout">অর্ডার করুন</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
